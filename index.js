@@ -21,6 +21,10 @@ function Teamcity(runner) {
     Base.call(this, runner)
     JSONCov.call(this, runner, false)
 
+    runner.on('start', function(suite) {
+        log("##teamcity[testSuiteStarted name='mocha.suite' duration='" + this.stats.duration + "']")
+    })
+
     runner.on('suite', function(suite) {
         if (suite.root) return
 
@@ -55,6 +59,7 @@ function Teamcity(runner) {
 
     runner.on('suite end', function(suite) {
         if (suite.root) return
+
         log("##teamcity[testSuiteFinished name='" + escape(suite.title) + "' duration='" + (Date.now() - suite.startDate) + "']")
     })
 
