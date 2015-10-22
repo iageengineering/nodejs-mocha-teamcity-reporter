@@ -1,6 +1,6 @@
 {
   "name": "mocha-teamcity-tests-cov-reporter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Teamcity tests and code coverage reporter for mocha",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,10 @@
   ],
   "dependencies": {
     "mocha": ">=1.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iageengineering/nodejs-mocha-teamcity-reporter.git"
   },
   "author": "iAge Engineering",
   "license": "MIT"
