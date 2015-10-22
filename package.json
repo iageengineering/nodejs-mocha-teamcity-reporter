@@ -1,6 +1,6 @@
 {
   "name": "mocha-teamcity-tests-cov-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Teamcity tests and code coverage reporter for mocha",
   "main": "index.js",
   "scripts": {
